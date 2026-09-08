@@ -67,7 +67,7 @@ function initSampleForm() {
       agencia ? 'Inmobiliaria: ' + agencia : '',
       nombre ? 'Contacto: ' + nombre : '',
       email ? 'Email: ' + email : '',
-      'Formato: ' + formato
+      'Estilo de música: ' + formato
     ].filter(Boolean).join('\n');
 
     window.location.href = 'mailto:relko.estate@gmail.com'
