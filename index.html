@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Relko — Vídeos de propiedades con IA para inmobiliarias</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap nav" id="nav">
+    <a class="brand" href="index.html" aria-label="Relko, inicio">
+      <svg class="sun" viewBox="0 0 120 60" role="img" aria-hidden="true">
+        <g fill="currentColor">
+          <path d="M41.3 48.6L27.2 48.0L41.0 50.8Z"/>
+          <path d="M42.7 44.2L29.1 40.3L41.9 46.3Z"/>
+          <path d="M45.0 40.3L32.8 33.3L43.8 42.2Z"/>
+          <path d="M48.3 37.1L38.1 27.3L46.6 38.6Z"/>
+          <path d="M52.2 34.7L44.7 22.8L50.2 35.7Z"/>
+          <path d="M56.6 33.3L52.1 20.0L54.4 33.9Z"/>
+          <path d="M61.1 33.0L60.0 19.0L58.9 33.0Z"/>
+          <path d="M65.6 33.9L67.9 20.0L63.4 33.3Z"/>
+          <path d="M69.8 35.7L75.3 22.8L67.8 34.7Z"/>
+          <path d="M73.4 38.6L81.9 27.3L71.7 37.1Z"/>
+          <path d="M76.2 42.2L87.2 33.3L75.0 40.3Z"/>
+          <path d="M78.1 46.3L90.9 40.3L77.3 44.2Z"/>
+          <path d="M79.0 50.8L92.8 48.0L78.7 48.6Z"/>
+        </g>
+        <path d="M46 52 A14 14 0 0 1 74 52" fill="none" stroke="currentColor" stroke-width="1.6"/>
+        <path d="M8 52 H112" stroke="currentColor" stroke-width="1.1" fill="none"/>
+      </svg>
+      <span class="wordmark">Relko</span>
+    </a>
+    <nav class="links">
+      <a href="index.html#como-funciona">Cómo funciona</a>
+      <a href="index.html#ia">La IA</a>
+      <a href="index.html#difusion">Difusión</a>
+      <a href="index.html#precios">Precios</a>
+      <a href="index.html#contacto">Contacto</a>
+    </nav>
+    <div class="nav-right">
+      <a class="tab-escaparate" href="propiedades.html"><span class="dot"></span> Escaparate</a>
+      <a class="nav-cta" href="index.html#muestra">Pide un vídeo de muestra</a>
+    </div>
+    <button class="menu-btn" id="navToggle" aria-label="Menú">☰</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <div class="kicker">Vídeo generado con IA para inmobiliarias</div>
+      <h1>Cada piso publicado, convertido en un <em>vídeo que se ve</em>, no solo fotos que se pasan.</h1>
+      <p class="lead">Partimos de las fotos que ya tenéis del anuncio y la IA construye el vídeo de la propiedad: recorrido, presentador y narración. Listo para el portal y en vertical para Instagram y TikTok. Sin grabar, sin editar, sin depender de un fotógrafo.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#muestra">Pide tu vídeo de muestra</a>
+      </div>
+    </div>
+
+    <div class="stage">
+      <svg class="stage-rays" viewBox="0 0 120 60" aria-hidden="true">
+        <g fill="currentColor">
+          <path d="M41.3 48.6L27.2 48.0L41.0 50.8Z"/><path d="M42.7 44.2L29.1 40.3L41.9 46.3Z"/>
+          <path d="M45.0 40.3L32.8 33.3L43.8 42.2Z"/><path d="M48.3 37.1L38.1 27.3L46.6 38.6Z"/>
+          <path d="M52.2 34.7L44.7 22.8L50.2 35.7Z"/><path d="M56.6 33.3L52.1 20.0L54.4 33.9Z"/>
+          <path d="M61.1 33.0L60.0 19.0L58.9 33.0Z"/><path d="M65.6 33.9L67.9 20.0L63.4 33.3Z"/>
+          <path d="M69.8 35.7L75.3 22.8L67.8 34.7Z"/><path d="M73.4 38.6L81.9 27.3L71.7 37.1Z"/>
+          <path d="M76.2 42.2L87.2 33.3L75.0 40.3Z"/><path d="M78.1 46.3L90.9 40.3L77.3 44.2Z"/>
+          <path d="M79.0 50.8L92.8 48.0L78.7 48.6Z"/>
+        </g>
+      </svg>
+
+      <div class="browser">
+        <div class="browser-bar"><span></span><span></span><span></span><i>portal inmobiliario</i></div>
+        <div class="browser-screen">
+          <div class="grain"></div>
+          <div class="play"></div>
+          <div class="listing">
+            <div class="listing-title">Piso en el Eixample · 92 m²</div>
+            <div class="listing-meta">3 habitaciones · terraza · reformado</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="phone">
+        <div class="screen">
+          <div class="grain"></div>
+          <div class="play small"></div>
+          <div class="caption">
+            <span class="tag">Nueva propiedad</span>
+            <div class="room">Eixample · 92 m²</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="same-video">el mismo vídeo</div>
+    </div>
+  </div>
+</section>
+
+<div class="stat-strip">
+  <div class="wrap">
+    <div class="stat"><div class="num">Cero</div><div class="label">Sesiones de grabación por vuestra parte</div></div>
+    <div class="stat"><div class="num">Uno</div><div class="label">Un solo vídeo sirve para el anuncio del portal y para las redes</div></div>
+    <div class="stat"><div class="num">Dos</div><div class="label">Formatos de entrega: horizontal para el portal, vertical para redes</div></div>
+  </div>
+</div>
+
+<section id="como-funciona">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Cómo funciona</div>
+      <h2>Tres pasos, sin que nadie tenga que coger una cámara</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="n">1</div>
+        <h3>Nos pasáis las fotos</h3>
+        <p>Las que ya tenéis publicadas en el portal, o cualquier foto nueva de la propiedad. No hace falta ningún equipo de grabación.</p>
+      </div>
+      <div class="step">
+        <div class="n">2</div>
+        <h3>La IA monta el vídeo</h3>
+        <p>Genera el recorrido a partir de las fotos, el presentador y la narración de la propiedad. Nosotros escribimos el guion y revisamos el resultado antes de entregarlo.</p>
+      </div>
+      <div class="step">
+        <div class="n">3</div>
+        <h3>Recibís el paquete</h3>
+        <p>El vídeo de la propiedad, entregado en horizontal para el anuncio del portal y en vertical para publicarlo tal cual en Instagram y TikTok.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="formatos" class="section-alt">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Formatos</div>
+      <h2>Tres maneras de presentar cada propiedad</h2>
+      <p>Elegís el estilo por propiedad o lo dejáis fijo para toda vuestra cartera; se puede combinar según el tipo de piso.</p>
+    </div>
+    <div class="formats">
+      <div class="format-card">
+        <div class="fig"><div class="avatar-dot"></div></div>
+        <h3>Presentador al frente</h3>
+        <p>Un agente o el propio dueño, recreado por IA, presenta la propiedad brevemente antes de entrar al recorrido. Da cara humana al anuncio.</p>
+      </div>
+      <div class="format-card">
+        <div class="fig"><div class="path-line"></div></div>
+        <h3>Acompañando el recorrido</h3>
+        <p>El presentador entra en plano al principio y va guiando la visita, o se mantiene en segundo plano durante todo el trayecto por la vivienda.</p>
+      </div>
+      <div class="format-card">
+        <div class="fig"><div class="data-tags"><span>92 m² · 3 hab.</span><span>Reforma 2021</span><span>Terraza 14 m²</span></div></div>
+        <h3>Sin presentador</h3>
+        <p>Solo el recorrido generado de la propiedad, con los datos clave apareciendo en pantalla a medida que avanza el vídeo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="ia">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">La tecnología</div>
+      <h2>Lo que antes pedía cámara, plató y montaje, hoy lo hace la IA</h2>
+      <p>No es un pase de fotos con música. La IA reconstruye el recorrido por la vivienda, recrea al presentador y le pone voz. Nosotros ponemos el criterio: guion, ritmo y revisión antes de que salga.</p>
+    </div>
+
+    <div class="ai-grid">
+      <div class="ai-item">
+        <div class="ai-n">01</div>
+        <h3>Recorrido generado</h3>
+        <p>A partir de vuestras fotos, la IA genera el movimiento por las estancias: la sensación de recorrer la casa, no de mirar un álbum.</p>
+      </div>
+      <div class="ai-item">
+        <div class="ai-n">02</div>
+        <h3>Presentador recreado</h3>
+        <p>Vuestro agente o el dueño de la agencia, recreado digitalmente a partir de unas imágenes suyas. Aparece en todas las propiedades sin volver a grabar.</p>
+      </div>
+      <div class="ai-item">
+        <div class="ai-n">03</div>
+        <h3>Voz y narración</h3>
+        <p>La narración se sintetiza sobre el guion de la propiedad. Se puede clonar la voz real del agente o usar una voz profesional.</p>
+      </div>
+      <div class="ai-item">
+        <div class="ai-n">04</div>
+        <h3>Cualquier idioma</h3>
+        <p>El mismo vídeo, en castellano, catalán, inglés o el idioma que pida el comprador. Útil si trabajáis con compradores extranjeros.</p>
+      </div>
+      <div class="ai-item">
+        <div class="ai-n">05</div>
+        <h3>Sin coste de rodaje</h3>
+        <p>No hay desplazamiento, ni equipo, ni cuadrar agendas con el propietario para grabar dentro de la vivienda.</p>
+      </div>
+      <div class="ai-item">
+        <div class="ai-n">06</div>
+        <h3>Revisión humana</h3>
+        <p>Ningún vídeo sale automáticamente. Se revisa uno a uno antes de entregarlo, y se rehace si algo no encaja.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="difusion" class="section-alt">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Difusión</div>
+      <h2>No solo hacemos el vídeo: lo ponemos delante de la gente</h2>
+      <p>Con cualquier plan mensual, cada propiedad se publica en nuestro escaparate y se difunde en el TikTok de Relko. Cuando alguien pregunta por una vivienda, os pasamos el contacto: la venta la cerráis vosotros.</p>
+    </div>
+
+    <div class="dif-grid">
+      <div class="dif-item">
+        <div class="ai-n">Escaparate</div>
+        <h3>Un portal solo de walkthroughs</h3>
+        <p>Aquí no hay anuncios con cuatro fotos borrosas. Todo lo que se publica tiene su vídeo, así que quien entra viene ya con ganas de ver casas.</p>
+        <a class="dif-link" href="propiedades.html">Ver el escaparate →</a>
+      </div>
+      <div class="dif-item">
+        <div class="ai-n">TikTok</div>
+        <h3>La versión vertical, publicada por nosotros</h3>
+        <p>Subimos el vídeo vertical a nuestra cuenta con la ficha de la propiedad. Vosotros no tenéis que gestionar ninguna red social ni publicar nada.</p>
+      </div>
+      <div class="dif-item">
+        <div class="ai-n">Contactos</div>
+        <h3>Los interesados van directos a vosotros</h3>
+        <p>No intermediamos en la venta ni cobramos comisión. Quien se interesa por una propiedad acaba escribiendo a la agencia o al propietario que la publica.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="muestra">
+  <div class="wrap">
+    <div class="sample">
+      <div class="sample-left">
+        <div class="kicker">Vídeo de muestra</div>
+        <h2>Elegid un piso vuestro y os lo devolvemos en vídeo</h2>
+        <p>Sin coste y sin compromiso. Nos pasáis el enlace de un anuncio que ya tengáis publicado, cogemos esas mismas fotos y os enviamos el vídeo montado para que juzguéis el resultado con una propiedad real vuestra, no con un ejemplo de otro.</p>
+        <ul class="sample-list">
+          <li>Solo necesitamos el enlace del anuncio</li>
+          <li>Os lo enviamos por correo en unos días</li>
+          <li>Si os gusta, lo podéis publicar aunque no contratéis nada</li>
+        </ul>
+      </div>
+
+      <div class="sample-form">
+        <div class="field">
+          <label for="m-enlace">Enlace del anuncio <span>· imprescindible</span></label>
+          <input type="url" id="m-enlace" placeholder="https://...">
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="m-agencia">Inmobiliaria</label>
+            <input type="text" id="m-agencia" placeholder="Nombre de la agencia">
+          </div>
+          <div class="field">
+            <label for="m-nombre">Vuestro nombre</label>
+            <input type="text" id="m-nombre" placeholder="Con quién hablamos">
+          </div>
+        </div>
+        <div class="field">
+          <label for="m-email">Email de contacto</label>
+          <input type="email" id="m-email" placeholder="donde os enviamos el vídeo">
+        </div>
+        <div class="field">
+          <label for="m-formato">Formato preferido</label>
+          <select id="m-formato">
+            <option>Nos da igual, elegid vosotros</option>
+            <option>Con presentador al frente</option>
+            <option>Presentador acompañando el recorrido</option>
+            <option>Sin presentador, solo el recorrido</option>
+          </select>
+        </div>
+        <button type="button" id="m-enviar">Pedir el vídeo de muestra</button>
+        <p class="sample-note">Se abrirá vuestro correo con los datos ya escritos. También podéis escribir directamente a <a href="mailto:relko.estate@gmail.com">relko.estate@gmail.com</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="precios">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Precios</div>
+      <h2>Empezad con un vídeo suelto, o aseguraos un ritmo mensual</h2>
+      <p>En las dos opciones entra el mismo vídeo, en horizontal para el portal y en vertical para redes. La suscripción añade además la difusión: publicamos cada propiedad en nuestro escaparate y en el TikTok de Relko.</p>
+    </div>
+
+    <div class="pricing-toggle">
+      <button class="active" data-panel="suelto">Vídeo suelto</button>
+      <button data-panel="mensual">Suscripción mensual</button>
+    </div>
+
+    <div class="price-panel active" id="panel-suelto">
+      <div class="single-price">
+        <div class="amount">100 €</div>
+        <div class="desc">
+          <h3>Por propiedad</h3>
+          <p>El vídeo de la propiedad, en horizontal para el anuncio del portal y en vertical para Instagram y TikTok. Sin permanencia, se pide propiedad a propiedad. La publicación en el escaparate y la difusión en nuestro TikTok entran solo con la suscripción.</p>
+        </div>
+      </div>
+      <p class="fine-print">Precio de referencia; puede ajustarse en packs cerrados de varias propiedades a la vez.</p>
+    </div>
+
+    <div class="price-panel" id="panel-mensual">
+      <div class="plans">
+        <div class="plan">
+          <div class="plan-name">Básico</div>
+          <div class="amount">450 €</div>
+          <span class="per">al mes · hasta 5 propiedades</span>
+          <ul>
+            <li>Vídeo de la propiedad para el portal</li>
+            <li>Versión vertical para Instagram y TikTok</li>
+            <li>Publicación en el escaparate de Relko</li>
+            <li>Difusión en el TikTok de Relko</li>
+            <li>Os pasamos los contactos interesados</li>
+          </ul>
+          <a href="#contacto">Empezar con Básico</a>
+        </div>
+        <div class="plan featured">
+          <span class="tag">Más elegido</span>
+          <div class="plan-name">Crecimiento</div>
+          <div class="amount">750 €</div>
+          <span class="per">al mes · hasta 10 propiedades</span>
+          <ul>
+            <li>Todo lo de Básico</li>
+            <li>Posición destacada en el escaparate</li>
+            <li>Prioridad de entrega</li>
+            <li>Un formato de presentador fijo para toda la cartera</li>
+          </ul>
+          <a href="#contacto">Empezar con Crecimiento</a>
+        </div>
+        <div class="plan">
+          <div class="plan-name">Agencia grande</div>
+          <div class="amount">1.000 €</div>
+          <span class="per">al mes · hasta 20 propiedades</span>
+          <ul>
+            <li>Todo lo de Crecimiento</li>
+            <li>Página propia de la agencia en el escaparate</li>
+            <li>Gestor de cuenta asignado</li>
+            <li>Ampliable por propiedad extra</li>
+          </ul>
+          <a href="#contacto">Hablar de Agencia</a>
+        </div>
+      </div>
+      <p class="fine-print">Las propiedades no usadas en un mes no se acumulan. El exceso sobre el límite del plan se factura por unidad. Disponible también para particulares que vendan su propia vivienda.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" class="section-alt">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Contacto</div>
+      <h2>¿Alguna duda antes de decidir nada?</h2>
+      <p>No hace falta que tengáis claro el plan, ni siquiera que queráis contratar. Si tenéis una pregunta suelta sobre cómo funciona, escribid y os respondemos.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="qa">
+        <details>
+          <summary>¿Y si las fotos que tenemos no son muy buenas?</summary>
+          <p>Trabajamos con lo que haya publicado. Si alguna foto no da el resultado esperado, os lo decimos antes de entregar y proponemos qué cambiar.</p>
+        </details>
+        <details>
+          <summary>¿Podemos usar la cara de nuestro agente en los vídeos?</summary>
+          <p>Sí. Se puede recrear al agente o al dueño de la agencia para que presente las propiedades, o dejar el vídeo sin presentador si preferís.</p>
+        </details>
+        <details>
+          <summary>¿Cuánto tardáis en entregar?</summary>
+          <p>Contad unos días laborables por propiedad. Si tenéis una fecha concreta de publicación, decidlo al pedirlo y lo ajustamos.</p>
+        </details>
+        <details>
+          <summary>¿Los vídeos son nuestros?</summary>
+          <p>Sí, los podéis usar donde queráis: portal, redes, email, cartelería. No hay límite de uso ni de plataforma.</p>
+        </details>
+        <details>
+          <summary>¿Hay permanencia en la suscripción?</summary>
+          <p>No. Se factura mes a mes y se puede parar cuando queráis, sin penalización.</p>
+        </details>
+      </div>
+
+      <div class="contact-box">
+        <h3>Escribidnos</h3>
+        <p>Contadnos vuestra duda y os contestamos. Si queréis, adjuntad el enlace de un anuncio vuestro y os decimos cómo lo plantearíamos.</p>
+
+        <div class="field">
+          <label for="c-nombre">Nombre</label>
+          <input type="text" id="c-nombre" placeholder="Vuestro nombre">
+        </div>
+        <div class="field">
+          <label for="c-agencia">Inmobiliaria</label>
+          <input type="text" id="c-agencia" placeholder="Nombre de la agencia">
+        </div>
+        <div class="field">
+          <label for="c-mensaje">Vuestra pregunta</label>
+          <textarea id="c-mensaje" placeholder="Lo que queráis saber"></textarea>
+        </div>
+        <button type="button" id="c-enviar">Enviar la pregunta</button>
+
+        <div class="contact-direct">
+          O directamente a <a href="mailto:relko.estate@gmail.com">relko.estate@gmail.com</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-final">
+  <div class="wrap">
+    <h2>Ved el resultado con vuestra propia propiedad, sin compromiso.</h2>
+    <p>Enviadnos las fotos de un piso que tengáis publicado y os devolvemos un vídeo de muestra para que lo veáis con vuestro propio anuncio.</p>
+    <a class="btn btn-primary" href="#muestra">Pedir vídeo de muestra</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-brand">
+      <svg class="sun" viewBox="0 0 120 60" role="img" aria-hidden="true">
+        <g fill="currentColor">
+          <path d="M41.3 48.6L27.2 48.0L41.0 50.8Z"/>
+          <path d="M42.7 44.2L29.1 40.3L41.9 46.3Z"/>
+          <path d="M45.0 40.3L32.8 33.3L43.8 42.2Z"/>
+          <path d="M48.3 37.1L38.1 27.3L46.6 38.6Z"/>
+          <path d="M52.2 34.7L44.7 22.8L50.2 35.7Z"/>
+          <path d="M56.6 33.3L52.1 20.0L54.4 33.9Z"/>
+          <path d="M61.1 33.0L60.0 19.0L58.9 33.0Z"/>
+          <path d="M65.6 33.9L67.9 20.0L63.4 33.3Z"/>
+          <path d="M69.8 35.7L75.3 22.8L67.8 34.7Z"/>
+          <path d="M73.4 38.6L81.9 27.3L71.7 37.1Z"/>
+          <path d="M76.2 42.2L87.2 33.3L75.0 40.3Z"/>
+          <path d="M78.1 46.3L90.9 40.3L77.3 44.2Z"/>
+          <path d="M79.0 50.8L92.8 48.0L78.7 48.6Z"/>
+        </g>
+        <path d="M46 52 A14 14 0 0 1 74 52" fill="none" stroke="currentColor" stroke-width="1.6"/>
+        <path d="M8 52 H112" stroke="currentColor" stroke-width="1.1" fill="none"/>
+      </svg>
+      <span>Vídeos de propiedades generados con IA</span>
+    </div>
+    <div>relko.estate@gmail.com</div>
+  </div>
+</footer>
+
+<a class="float-contact" href="#contacto">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+    <path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.9 8.9 0 0 1-3.9-.9L3 20.5l1.6-4.6A8.4 8.4 0 0 1 12 3.1a8.4 8.4 0 0 1 9 8.4Z"/>
+  </svg>
+  Hablemos
+</a>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
