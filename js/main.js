@@ -184,20 +184,20 @@ function initFicha() {
     container.innerHTML = `
       <div class="not-found">
         <h1>Propiedad no encontrada</h1>
-        <p>Puede que el enlace sea incorrecto o la propiedad ya no esté disponible en el escaparate.</p>
-        <a href="propiedades.html" class="btn btn-primary">Volver al escaparate</a>
+        <p>Puede que el enlace sea incorrecto o la propiedad ya no esté disponible.</p>
+        <a href="propiedades.html" class="btn btn-primary">Volver a explorar pisos</a>
       </div>`;
     return;
   }
 
-  document.title = `${p.titulo} — Escaparate Relko`;
+  document.title = `${p.titulo} — Relko`;
 
   const contactoHref = 'mailto:' + p.contacto
     + '?subject=' + encodeURIComponent('Interés en: ' + p.titulo + ' (' + p.zona + ')')
     + '&body=' + encodeURIComponent('Hola, he visto esta propiedad en el escaparate de Relko y me gustaría más información.\n\nPropiedad: ' + p.titulo + '\nZona: ' + p.zona + '\nPrecio: ' + eur(p.precio) + '\n\n');
 
   container.innerHTML = `
-    <a href="propiedades.html" class="back-link">← Volver al escaparate</a>
+    <a href="propiedades.html" class="back-link">← Volver a explorar pisos</a>
     <div class="ficha-box plate">
       <div class="ficha-grid">
         <div class="ficha-video">
