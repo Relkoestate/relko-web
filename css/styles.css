@@ -357,8 +357,20 @@ footer .wrap{ display:flex; justify-content:space-between; align-items:center; f
 
 /* ---------- ESCAPARATE: filtros ---------- */
 .esc-filters{ position: sticky; top: 69px; z-index: 40; background: var(--bg-alt); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.filters-toggle{ display:none; }
 .filter-row{ display:grid; grid-template-columns: 1.4fr repeat(5, 1fr) auto; gap: 14px; align-items:end; padding: 18px 0; }
 @media (max-width: 1040px){ .filter-row{ grid-template-columns: repeat(3,1fr); } }
+@media (max-width: 760px){
+  .filters-toggle{
+    display:flex; width:100%; align-items:center; justify-content:space-between;
+    padding: 14px 0; background:none; border:none; cursor:pointer;
+    font-family:'Work Sans',sans-serif; font-size: 0.95rem; font-weight:500; color: var(--ink);
+  }
+  .filters-toggle .chevron{ width:18px; height:18px; transition: transform .2s ease; }
+  #escFilters.open .filters-toggle .chevron{ transform: rotate(180deg); }
+  .filter-row{ display:none; padding-top: 4px; }
+  #escFilters.open .filter-row{ display:grid; }
+}
 @media (max-width: 620px){ .filter-row{ grid-template-columns: repeat(2,1fr); } }
 .filter label{ display:block; font-size: 0.76rem; color: var(--ink-soft); margin-bottom: 5px; letter-spacing: 0.04em; }
 .filter input, .filter select{ width: 100%; padding: 9px 10px; font-family:'Work Sans',sans-serif; font-size: 0.92rem; border: 1px solid var(--line); background: var(--paper); color: var(--ink); }

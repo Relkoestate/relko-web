@@ -76,6 +76,14 @@ function initSampleForm() {
   });
 }
 
+// ---------- Escaparate: plegar/desplegar filtros en móvil ----------
+function initFiltersToggle() {
+  const escFilters = document.getElementById('escFilters');
+  const toggle = document.getElementById('filtersToggle');
+  if (!escFilters || !toggle) return;
+  toggle.addEventListener('click', () => escFilters.classList.toggle('open'));
+}
+
 // ---------- Escaparate: filtros y listado ----------
 function initEscaparate() {
   const cont = document.getElementById('esc-cards');
@@ -234,6 +242,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initPricingToggle();
   initContactForm();
   initSampleForm();
+  initFiltersToggle();
   initEscaparate();
   initFicha();
 });
