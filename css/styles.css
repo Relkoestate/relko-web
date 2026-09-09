@@ -268,6 +268,15 @@ section{ padding: 96px 0; }
 .sample-note{ font-size: 0.82rem; margin-top: 14px; }
 .sample-note a{ color: var(--ink); }
 
+/* ---------- TRUST BAR ---------- */
+.trust-bar{ display:grid; grid-template-columns: repeat(2, 1fr); gap: 18px 32px; }
+@media (max-width: 700px){ .trust-bar{ grid-template-columns: 1fr; } }
+.trust-item{ display:flex; align-items:flex-start; gap: 12px; font-size: 0.96rem; }
+.trust-item .check{
+  width: 20px; height: 20px; flex-shrink: 0; margin-top: 2px;
+  color: var(--gold-dark);
+}
+
 /* ---------- PRICING ---------- */
 .pricing-toggle{ display:inline-flex; border:1px solid var(--ink); margin-bottom: 44px; }
 .pricing-toggle button{ padding: 10px 22px; background:none; border:none; font-family:'Work Sans',sans-serif; font-size: 0.94rem; cursor:pointer; color: var(--ink); }
@@ -330,6 +339,14 @@ section{ padding: 96px 0; }
 .contact-direct{ margin-top: 18px; font-size: 0.88rem; color: var(--ink-soft); }
 .contact-direct a{ color: var(--ink); }
 
+.hp-field{ position:absolute; left:-9999px; top:-9999px; }
+.form-success{
+  display:none; margin-top:16px; padding:14px 16px;
+  background: var(--bg); border:1px solid var(--gold-dark); color: var(--ink);
+  font-size:0.9rem;
+}
+.form-success.visible{ display:block; }
+
 /* ---------- BOTON FLOTANTE ---------- */
 .float-contact{
   position: fixed; right: 22px; bottom: 22px; z-index: 80;
@@ -342,11 +359,36 @@ section{ padding: 96px 0; }
 @media (max-width: 640px){ .float-contact{ right: 14px; bottom: 14px; padding: 12px 16px; font-size: 0.88rem; } }
 
 /* ---------- FOOTER ---------- */
+/* ---------- COOKIE BANNER ---------- */
+.cookie-banner{
+  position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 90;
+  max-width: 620px; margin: 0 auto;
+  background: var(--ink); color: var(--paper);
+  border: 1px solid var(--ink);
+  box-shadow: 0 12px 30px rgba(28,27,25,0.28);
+}
+.cookie-banner-inner{ padding: 20px 22px; }
+.cookie-banner p{ color: #C9CDD3; font-size: 0.88rem; margin-bottom: 14px; }
+.cookie-banner p a{ color: var(--paper); text-decoration: underline; }
+.cookie-actions{ display:flex; gap: 10px; justify-content:flex-end; }
+.cookie-actions button{
+  padding: 9px 18px; font-family:'Work Sans',sans-serif; font-size: 0.88rem; cursor:pointer;
+  border: 1px solid var(--paper);
+}
+#cookieReject{ background: transparent; color: var(--paper); }
+#cookieReject:hover{ background: rgba(247,242,232,0.1); }
+#cookieAccept{ background: var(--gold); color: var(--ink); border-color: var(--gold); }
+#cookieAccept:hover{ background: var(--paper); border-color: var(--paper); }
+@media (max-width: 480px){ .cookie-actions{ flex-direction: column-reverse; } .cookie-actions button{ width:100%; } }
+
 footer{ padding: 40px 0; border-top:1px solid var(--line); }
 footer .wrap{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; font-size:0.85rem; color: var(--ink-soft); }
 .footer-brand{ display:flex; align-items:center; gap:12px; color: var(--ink); }
 .footer-brand .sun{ width: 40px; height: 20px; overflow: visible; }
 .footer-brand span{ color: var(--ink-soft); }
+.footer-links{ display:flex; align-items:center; gap: 20px; }
+.footer-links a{ color: var(--ink-soft); text-decoration:none; }
+.footer-links a:hover{ color: var(--ink); }
 
 /* ---------- ESCAPARATE: cabecera ---------- */
 .esc-head{ padding: 68px 0 44px; }

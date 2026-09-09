@@ -22,57 +22,48 @@ function initPricingToggle() {
   });
 }
 
+// ---------- Envío de formularios a Netlify Forms ----------
+function pushConversion(formName) {
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({ event: 'form_submission', form_name: formName });
+}
+
+function submitNetlifyForm(form, successEl, conversionName) {
+  const body = new URLSearchParams(new FormData(form)).toString();
+  fetch('/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body
+  })
+    .then(() => {
+      form.reset();
+      successEl.classList.add('visible');
+      pushConversion(conversionName);
+    })
+    .catch(() => {
+      alert('No se pudo enviar. Escribidnos directamente a relko.estate@gmail.com.');
+    });
+}
+
 // ---------- Formulario de contacto general ----------
 function initContactForm() {
-  const enviar = document.getElementById('c-enviar');
-  if (!enviar) return;
-  enviar.addEventListener('click', () => {
-    const nombre = document.getElementById('c-nombre').value.trim();
-    const agencia = document.getElementById('c-agencia').value.trim();
-    const mensaje = document.getElementById('c-mensaje').value.trim();
-    const asunto = agencia ? 'Consulta de ' + agencia : 'Consulta sobre Relko';
-    const cuerpo = [
-      nombre ? 'Nombre: ' + nombre : '',
-      agencia ? 'Inmobiliaria: ' + agencia : '',
-      '',
-      mensaje
-    ].filter(Boolean).join('\n');
-    window.location.href = 'mailto:relko.estate@gmail.com'
-      + '?subject=' + encodeURIComponent(asunto)
-      + '&body=' + encodeURIComponent(cuerpo);
+  const form = document.getElementById('contactoForm');
+  if (!form) return;
+  const success = document.getElementById('c-success');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    submitNetlifyForm(form, success, 'consulta');
   });
 }
 
 // ---------- Formulario de vídeo de muestra ----------
 function initSampleForm() {
-  const mEnviar = document.getElementById('m-enviar');
-  if (!mEnviar) return;
-  mEnviar.addEventListener('click', () => {
-    const enlace = document.getElementById('m-enlace').value.trim();
-    const agencia = document.getElementById('m-agencia').value.trim();
-    const nombre = document.getElementById('m-nombre').value.trim();
-    const email = document.getElementById('m-email').value.trim();
-    const formato = document.getElementById('m-formato').value;
-
-    if (!enlace) {
-      document.getElementById('m-enlace').focus();
-      return;
-    }
-
-    const asunto = agencia ? 'Vídeo de muestra · ' + agencia : 'Petición de vídeo de muestra';
-    const cuerpo = [
-      'Hola, nos gustaría un vídeo de muestra de esta propiedad:',
-      '',
-      'Anuncio: ' + enlace,
-      agencia ? 'Inmobiliaria: ' + agencia : '',
-      nombre ? 'Contacto: ' + nombre : '',
-      email ? 'Email: ' + email : '',
-      'Estilo de música: ' + formato
-    ].filter(Boolean).join('\n');
-
-    window.location.href = 'mailto:relko.estate@gmail.com'
-      + '?subject=' + encodeURIComponent(asunto)
-      + '&body=' + encodeURIComponent(cuerpo);
+  const form = document.getElementById('muestraForm');
+  if (!form) return;
+  const success = document.getElementById('m-success');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    submitNetlifyForm(form, success, 'video-muestra');
   });
 }
 
@@ -191,6 +182,48 @@ function initFicha() {
   }
 
   document.title = `${p.titulo} — Relko`;
+
+  const resumen = `${p.titulo} en ${p.zona}, ${p.ciudad}: ${eur(p.precio)}, ${p.m2} m², ${p.hab} habitaciones. Con walkthrough en vídeo generado por IA.`;
+  const metaDescription = document.getElementById('metaDescription');
+  const ogTitle = document.getElementById('ogTitle');
+  const ogDescription = document.getElementById('ogDescription');
+  if (metaDescription) metaDescription.setAttribute('content', resumen);
+  if (ogTitle) ogTitle.setAttribute('content', `${p.titulo} — Relko`);
+  if (ogDescription) ogDescription.setAttribute('content', resumen);
+
+  const pageUrl = 'https://relkoestate.com/propiedad.html?id=' + p.id;
+  const ldBreadcrumb = document.getElementById('ldBreadcrumb');
+  if (ldBreadcrumb) {
+    ldBreadcrumb.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://relkoestate.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Explorar pisos', item: 'https://relkoestate.com/propiedades.html' },
+        { '@type': 'ListItem', position: 3, name: p.titulo, item: pageUrl }
+      ]
+    });
+  }
+
+  const TIPO_SCHEMA = { Piso: 'Apartment', Ático: 'Apartment', Dúplex: 'Apartment', Estudio: 'Apartment', Casa: 'House' };
+  const ldListing = document.getElementById('ldListing');
+  if (ldListing) {
+    ldListing.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'RealEstateListing',
+      name: p.titulo,
+      description: p.desc,
+      url: pageUrl,
+      about: {
+        '@type': TIPO_SCHEMA[p.tipo] || 'Residence',
+        numberOfRooms: p.hab,
+        numberOfBathroomsTotal: p.banos,
+        floorSize: { '@type': 'QuantitativeValue', value: p.m2, unitCode: 'MTK' },
+        address: { '@type': 'PostalAddress', addressLocality: p.zona, addressRegion: p.ciudad, addressCountry: 'ES' }
+      },
+      offers: { '@type': 'Offer', price: p.precio, priceCurrency: 'EUR' }
+    });
+  }
 
   const contactoHref = 'mailto:' + p.contacto
     + '?subject=' + encodeURIComponent('Interés en: ' + p.titulo + ' (' + p.zona + ')')
