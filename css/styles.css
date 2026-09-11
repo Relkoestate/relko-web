@@ -70,21 +70,22 @@ nav.links a:hover{ border-bottom-color: var(--gold-dark); }
   padding: 9px 18px; background: var(--ink); color: var(--paper);
   text-decoration:none; font-size: 0.9rem; border: 1px solid var(--ink);
 }
+nav.links a.nav-cta{ color: var(--paper); border-bottom: none; }
 .nav-cta:hover{ background: transparent; color: var(--ink); }
+nav.links a.nav-cta:hover{ color: var(--ink); }
 .menu-btn{ display:none; background:none; border:1px solid var(--ink); padding:8px 10px; cursor:pointer; }
-.nav-right{ display:flex; align-items:center; gap: 18px; }
 
-@media (max-width: 900px){ .nav-right .nav-cta{ display:none; } }
+@media (max-width: 900px){ .nav-cta{ display:none; } }
 @media (max-width: 780px){
   nav.links, .nav-cta{ display:none; }
   .menu-btn{ display:block; }
   .nav.open nav.links{
-    display:flex; flex-direction:column; gap: 16px;
+    display:flex; flex-direction:column; align-items:stretch; gap: 16px;
     position:absolute; top:64px; left:0; right:0;
     background: var(--paper); border-bottom: 1px solid var(--line);
     padding: 20px 20px 24px;
   }
-  .nav.open .nav-cta{ display:inline-block; margin: 0 20px 20px; text-align:center; }
+  .nav.open .nav-cta{ display:block; text-align:center; }
 }
 
 /* ---------- HERO ---------- */
@@ -140,6 +141,8 @@ nav.links a:hover{ border-bottom-color: var(--gold-dark); }
 @media (max-width: 720px){
   .phone{ width: 116px; right: -2px; bottom: -22px; padding: 6px 6px 11px; }
   .stage{ margin-top: 56px; }
+  .listing{ right: 124px; }
+  .listing-title{ font-size: 1rem; }
 }
 .screen{
   position:relative; aspect-ratio: 9/16; overflow:hidden;
@@ -176,6 +179,7 @@ nav.links a:hover{ border-bottom-color: var(--gold-dark); }
 
 /* ---------- STAT STRIP ---------- */
 .stat-strip{ margin-top: 96px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--bg-alt); }
+@media (max-width: 720px){ .stat-strip{ margin-top: 44px; } }
 .stat-strip .wrap{ display:grid; grid-template-columns: repeat(3,1fr); }
 .stat{ padding: 30px 28px; border-left: 1px solid var(--line); }
 .stat:first-child{ border-left:none; }
@@ -189,6 +193,7 @@ nav.links a:hover{ border-bottom-color: var(--gold-dark); }
 
 /* ---------- SECTION GENERIC ---------- */
 section{ padding: 96px 0; }
+@media (max-width: 720px){ section{ padding: 56px 0; } }
 .section-alt{ background: var(--bg-alt); }
 .section-head{ max-width: 640px; margin-bottom: 56px; }
 .section-head .kicker{ margin-bottom: 14px; }
@@ -257,16 +262,15 @@ section{ padding: 96px 0; }
 /* ---------- PRICING ---------- */
 .pricing-panel{ border: 1px solid var(--ink); background: var(--paper); }
 .pricing-group-label{ padding: 24px 28px 14px; font-family:'Work Sans',sans-serif; font-weight:600; font-size:0.85rem; color: var(--ink); text-transform: uppercase; letter-spacing:0.04em; }
-.pricing-group-label .note{ font-weight:400; text-transform:none; letter-spacing:normal; color: var(--ink-soft); font-size:0.82rem; }
 
-.modalidades-row{ display:grid; grid-template-columns: repeat(3,1fr); border-top: 1px solid var(--line); }
-@media (max-width: 760px){ .modalidades-row{ grid-template-columns: 1fr; } }
-.modalidad-item{ display:flex; align-items:center; gap:14px; padding: 22px 24px; border-left: 1px solid var(--line); }
-.modalidad-item:first-child{ border-left:none; }
-@media (max-width: 760px){ .modalidad-item{ border-left:none; border-top:1px solid var(--line); } .modalidad-item:first-child{ border-top:none; } }
-.modalidad-item svg{ width:28px; height:28px; flex-shrink:0; color: var(--gold-dark); }
-.modalidad-item strong{ display:block; font-size:0.95rem; margin-bottom:4px; }
-.modalidad-item .tier{ font-size:0.78rem; color: var(--ink-soft); }
+.price-table-wrap{ overflow-x:auto; border-top: 1px solid var(--line); }
+.price-table{ width:100%; border-collapse:collapse; font-size:0.92rem; }
+.price-table th, .price-table td{ padding: 14px 28px; text-align:left; border-bottom:1px solid var(--line-soft); white-space:nowrap; }
+.price-table thead th{ font-family:'Work Sans',sans-serif; font-weight:600; color:var(--ink-soft); font-size:0.78rem; text-transform:uppercase; letter-spacing:0.03em; border-bottom:1px solid var(--ink); }
+.price-table tbody th{ font-family:'Fraunces',serif; font-weight:520; color:var(--ink); font-size:1rem; white-space:nowrap; }
+.price-table td{ color: var(--ink); }
+.price-table .unit{ color:var(--ink-soft); font-size:0.8rem; }
+.price-table tbody tr:last-child th, .price-table tbody tr:last-child td{ border-bottom:none; }
 
 .plans{ display:grid; grid-template-columns: repeat(4,1fr); gap:0; border-top:1px solid var(--line); }
 @media (max-width: 1000px){

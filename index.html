@@ -42,7 +42,14 @@
   "serviceType": "Vídeos inmobiliarios generados con IA",
   "provider": { "@type": "Organization", "name": "Relko", "url": "https://relkoestate.com/" },
   "areaServed": "ES",
-  "description": "Convertimos las fotos de un anuncio inmobiliario en un vídeo walkthrough generado por IA, en horizontal para el portal y en vertical para redes sociales, con música, narración o un agente presentador según la modalidad elegida. Disponible por propiedad individual o en packs de 3, 5 y 10 propiedades, con publicación incluida en el TikTok de Relko."
+  "description": "Convertimos las fotos de un anuncio inmobiliario en un vídeo walkthrough generado por IA, en horizontal para el portal y en vertical para redes sociales, con música, narración o un agente presentador según la modalidad elegida. Disponible por propiedad individual o en packs de 3, 5 y 10 propiedades, con publicación incluida en el TikTok de Relko.",
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "EUR",
+    "lowPrice": "120",
+    "highPrice": "1800",
+    "offerCount": "12"
+  }
 }
 </script>
 <script type="application/ld+json">
@@ -73,7 +80,7 @@
     {
       "@type": "Question",
       "name": "¿Cuánto cuesta cada pack o modalidad?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Aún estamos cerrando los precios. Escribidnos y os pasamos un presupuesto ajustado a vuestro caso." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Los precios están en la tabla de la sección Precios, según el pack y la modalidad que elijáis. Escribidnos si necesitáis algo a medida." }
     }
   ]
 }
@@ -115,10 +122,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="index.html#difusion">Difusión</a>
       <a href="index.html#precios">Precios</a>
       <a href="index.html#contacto">Contacto</a>
-    </nav>
-    <div class="nav-right">
       <a class="nav-cta" href="index.html#muestra">Pide un vídeo de muestra</a>
-    </div>
+    </nav>
     <button class="menu-btn" id="navToggle" aria-label="Menú">☰</button>
   </div>
 </header>
@@ -328,7 +333,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="section-head">
       <div class="kicker">Precios</div>
       <h2>Un vídeo por vivienda, con la modalidad que queráis</h2>
-      <p>Elegís cuántas propiedades cubrir con un pack, y para cada vídeo, qué modalidad lleva. Todos los packs incluyen el vídeo en horizontal para el portal y en vertical para redes, más su publicación en el TikTok de Relko. Precios aún por definir — escribidnos y os pasamos un presupuesto ajustado a vuestro caso.</p>
+      <p>Elegís cuántas propiedades cubrir con un pack, y qué modalidad lleva cada vídeo: música, narración o agente. El precio final depende de ambas cosas — la tabla de abajo lo detalla al completo.</p>
     </div>
 
     <div class="pricing-panel">
@@ -336,79 +341,88 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="plans">
         <div class="plan">
           <div class="plan-name">Individual</div>
-          <div class="amount">Consultar</div>
+          <div class="amount">Desde 120€</div>
           <span class="per">1 propiedad</span>
           <ul>
             <li>1 vídeo walkthrough (horizontal + vertical)</li>
             <li>Publicación en el TikTok de Relko</li>
             <li>Se pide cuando lo necesitéis, sin permanencia</li>
           </ul>
-          <a href="#contacto">Pedir presupuesto</a>
+          <a href="#contacto">Contactar</a>
         </div>
         <div class="plan">
           <div class="plan-name">Pack 3</div>
-          <div class="amount">Consultar</div>
+          <div class="amount">Desde 330€</div>
           <span class="per">3 propiedades</span>
           <ul>
             <li>3 vídeos walkthrough (horizontal + vertical)</li>
             <li>Publicación en el TikTok de Relko</li>
             <li>Ideal para probar con varias propiedades</li>
           </ul>
-          <a href="#contacto">Pedir presupuesto</a>
+          <a href="#contacto">Contactar</a>
         </div>
         <div class="plan">
           <div class="plan-name">Pack 5</div>
-          <div class="amount">Consultar</div>
+          <div class="amount">Desde 500€</div>
           <span class="per">5 propiedades</span>
           <ul>
             <li>5 vídeos walkthrough (horizontal + vertical)</li>
             <li>Publicación en el TikTok de Relko, con prioridad de publicación</li>
             <li>Para una cartera activa</li>
           </ul>
-          <a href="#contacto">Pedir presupuesto</a>
+          <a href="#contacto">Contactar</a>
         </div>
         <div class="plan">
           <div class="plan-name">Pack 10</div>
-          <div class="amount">Consultar</div>
+          <div class="amount">Desde 900€</div>
           <span class="per">10 propiedades</span>
           <ul>
             <li>10 vídeos walkthrough (horizontal + vertical)</li>
             <li>Publicación en el TikTok de Relko, con máxima prioridad</li>
             <li>Para inmobiliarias con cartera grande</li>
           </ul>
-          <a href="#contacto">Pedir presupuesto</a>
+          <a href="#contacto">Contactar</a>
         </div>
       </div>
 
-      <div class="pricing-group-label">+ Modalidad de vídeo <span class="note">(extra por vídeo, de menor a mayor coste)</span></div>
-      <div class="modalidades-row">
-        <div class="modalidad-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>
-          </svg>
-          <div>
-            <strong>Música comercial de fondo</strong>
-            <span class="tier">Incluida en el precio base</span>
-          </div>
-        </div>
-        <div class="modalidad-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/>
-          </svg>
-          <div>
-            <strong>Voz y narración</strong>
-            <span class="tier">Extra</span>
-          </div>
-        </div>
-        <div class="modalidad-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
-          </svg>
-          <div>
-            <strong>Agente + narración</strong>
-            <span class="tier">Extra premium</span>
-          </div>
-        </div>
+      <div class="pricing-group-label">Precio según pack y modalidad</div>
+      <div class="price-table-wrap">
+        <table class="price-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Música</th>
+              <th>Narración</th>
+              <th>Agente + narración</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>1 propiedad</th>
+              <td>120€</td>
+              <td>160€</td>
+              <td>240€</td>
+            </tr>
+            <tr>
+              <th>Pack 3</th>
+              <td>330€ <span class="unit">(110€/u)</span></td>
+              <td>450€ <span class="unit">(150€/u)</span></td>
+              <td>660€ <span class="unit">(220€/u)</span></td>
+            </tr>
+            <tr>
+              <th>Pack 5</th>
+              <td>500€ <span class="unit">(100€/u)</span></td>
+              <td>700€ <span class="unit">(140€/u)</span></td>
+              <td>1.000€ <span class="unit">(200€/u)</span></td>
+            </tr>
+            <tr>
+              <th>Pack 10</th>
+              <td>900€ <span class="unit">(90€/u)</span></td>
+              <td>1.250€ <span class="unit">(125€/u)</span></td>
+              <td>1.800€ <span class="unit">(180€/u)</span></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
@@ -470,7 +484,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </details>
         <details>
           <summary>¿Cuánto cuesta cada pack o modalidad?</summary>
-          <p>Aún estamos cerrando los precios. Escribidnos y os pasamos un presupuesto ajustado a vuestro caso.</p>
+          <p>Los precios están en la tabla de la sección Precios, según el pack y la modalidad que elijáis. Escribidnos si necesitáis algo a medida.</p>
         </details>
       </div>
 
